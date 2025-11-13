@@ -7,13 +7,14 @@ Repo này trình bày phương pháp để tích hợp một mini app sử dụn
 
 Repo này chứa 4 thư mục:
 
-1.   **`uniapp`**: Đây là một mini app sử dụng uni-app, đây là 1 ứng dụng đơn giản có 1 màn hình hiển thị danh sách bao gồm 10 ảnh được lấy từ API list photos của unsplash.
+1.   **`uniapp`**: Đây là một mini app sử dụng uni-app, là 1 ứng dụng đơn giản có 1 màn hình hiển thị danh sách bao gồm 10 ảnh được lấy từ API list photos của unsplash.
 
 2.   **`SDK-Android@4.85-20251106`**: Đây là bộ SDK hỗ trợ cho việc tích hợp mini app vào trong app android native (lưu ý: bộ sdk này không áp dụng cho toàn bộ các phiên bản uni app khác nhau, việc sử dụng bộ sdk nào còn phụ thuộc vào việc bạn build mini app trên HBuilderX phiên bản bao nhiêu)
 
-3.   **`My_kotlin_groovydsl_uniappx_app`**: Ứng dụng Android Native (Host) tích hợp mini app, ứng dụng sử dụng ngôn ngữ kotlin và groovy dsl.
+3.   **`My_kotlin_groovydsl_uniappx_app`**: Ứng dụng Android Native (Host) tích hợp mini app, ứng dụng sử dụng ngôn ngữ kotlin và groovy dsl, là 1 ứng dụng đơn giản, khi khởi động ứng dụng sẽ có 1 button, khi nhấn vào button này sẽ tiến hành chuyển qua giao diện của mini app.
 
-4.   **`My_java_kotlindsl_uniappx_app`**: Ứng dụng Android Native (Host) tích hợp mini app, ứng dụng sử dụng ngôn ngữ java và kotlin dsl.
+4.   **`My_java_kotlindsl_uniappx_app`**: Ứng dụng Android Native (Host) tích hợp mini app, ứng dụng sử dụng ngôn ngữ java và kotlin dsl, là 1 ứng dụng đơn giản, khi khởi động ứng dụng sẽ có 1 button, khi nhấn vào button này sẽ tiến hành chuyển qua giao diện của mini app.
+
 ---
 ##  Cài đặt
 Dưới đây là hướng dẫn để clone và chạy cả hai phiên bản demo.
