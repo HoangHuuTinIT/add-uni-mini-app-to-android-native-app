@@ -49,7 +49,6 @@ git clone https://github.com/HoangHuuTinIT/add-uni-mini-app-to-android-native-ap
 
 5. Nhấn nút "Run 'app'" để build và chạy ứng dụng.
 
-```
 ---
 ## Cách tích hợp chi tiết:
 Tham khảo tại đường link:
