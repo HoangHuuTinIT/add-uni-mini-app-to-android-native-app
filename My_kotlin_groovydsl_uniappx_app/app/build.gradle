@@ -1,0 +1,67 @@
+
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.jetbrains.kotlin.android)
+}
+
+def mfph = [
+        "apk.applicationId" : "com.example.my_kotlin_groovydsl_uniappx_app",
+]
+android {
+    namespace 'com.example.my_kotlin_groovydsl_uniappx_app'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.example.my_kotlin_groovydsl_uniappx_app"
+        minSdk 21
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            // Hỗ trợ các kiến trúc CPU này
+            abiFilters 'x86','armeabi-v7a',"arm64-v8a"
+        }
+        manifestPlaceholders = mfph
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    aaptOptions {
+        additionalParameters '--auto-add-overlay'
+        ignoreAssetsPattern "!.svn:!.git:.*:!CVS:!thumbs.db:!picasa.ini:!*.scc:*~"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard.cfg'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    //thêm các file .aar và .jar
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.aar'], dir: 'libs')
+    //Các thư viện cần thiết để uni-app SDK hoạt động
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.alibaba:fastjson:1.2.83'
+    implementation 'com.facebook.fresco:fresco:2.5.0'
+    implementation 'com.facebook.fresco:animated-gif:2.5.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'androidx.webkit:webkit:1.5.0'
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+}
